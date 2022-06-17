@@ -37,7 +37,10 @@ Issuing `paper` command will expose all the current available actions in the app
 `paper hello` will echo `hello` is useful for sanity checks. 
 
 
+# Other Stuff  ...
 
+Current Version only accept two parameters a proof-of-concept:
+`some_name` and `some_number` 
 
 ---  
 # References    
