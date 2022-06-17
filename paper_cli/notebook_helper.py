@@ -8,13 +8,17 @@ from typing import List
 import papermill as pm
 import scrapbook as sb
 
+import simpleflake as flake  # for psuedo UUIDs that are still sortable,
+                             #  in case multiple runs within same second
+
 
 def execute_notebook(infile_path: pathlib.Path, params: dict) -> str:
     my_log = logging.getLogger()
     my_log.debug(f"ENTERING: execute_notebook {infile_path!r}")
     basepath, basename = os.path.split(infile_path)
     # TODO: Maybe add timestamp or some other snippet if uniqueness is required ...
-    outname = basename.replace('.', '_out.')
+
+    outname = basename.replace('.', f'_out_{flake.simpleflake()}.')
     my_log.debug(f" Output Filename: {outname!r} in path: {basepath!r}")
     out_path = os.path.join(basepath, outname)
     pm.execute_notebook(

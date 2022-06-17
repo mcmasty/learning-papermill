@@ -11,6 +11,31 @@ Jupyter Notebook.  Inspired by
 
 
 
+# Installation  
+
+Clone repository then use either `make` or `pip`
+
+From the `learning-papermill` directory use command 
+
+`make install` 
+
+or
+
+`pip install .`
+
+
+### Sanity check  
+
+This example application also uses the [Click](https://click.palletsprojects.com/en/8.1.x/) framework for the 
+Command-Line-Interface.  
+
+The cli app has the name `paper`  
+
+Issuing `paper` command will expose all the current available actions in the app.  
+
+
+`paper hello` will echo `hello` is useful for sanity checks. 
+
 
 
 
