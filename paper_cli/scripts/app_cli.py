@@ -10,7 +10,6 @@ root_logger = logging.getLogger()
 
 
 @click.group()
-# @click.version_option(version=__version__)
 @click.option('--debug/--no-debug', default=False, envvar='PAPER_DEBUG')
 @click.pass_context
 def cli(ctx, debug):
